@@ -1,0 +1,23 @@
+<h1>Nuevo checkin</h1>
+
+<%= form_for @checkin do |f| -%>
+	USUARIO ID: <%= f.text_field :user_id %><br/>
+	LUGAR ID: <%= f.text_field :place_id %><br/>
+	COMENTARIO: <%= f.text_field :comment %><br/>
+	<%= f.submit %>
+<% end -%>
+
+<%= link_to 'Back', cities_path %>
+
+<div>
+	<h2> Checkins ingresados: </h2>
+	<%if (@ultimos_checkins) %>
+		<% @ultimos_checkins.each do |item| %>
+		usurio <%= item.user_id %> hizo check in en <%= item.place_id %> <br/>y commento:  <%= item.comment%> <br/>
+		<% end %>
+	<% end %>
+	<% if !(@ultimos_checkins) %>
+		<h3> impementar a futuroo :)  </h3>
+    <% end %>
+</div>
+

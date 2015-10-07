@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @faction.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @faction.type %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @faction.points %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @faction.color %>
+</p>
+
+<%= link_to 'Edit', edit_faction_path(@faction) %> |
+<%= link_to 'Back', factions_path %>
